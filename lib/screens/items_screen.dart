@@ -222,9 +222,7 @@ class _ItemsScreenState extends State<ItemsScreen> {
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: 'Search my items',
-                suffixIcon: Icon(
-                  Icons.search
-                ),
+                suffixIcon: Icon(Icons.search),
               ),
             ),
           ),
@@ -255,10 +253,24 @@ class _ItemsScreenState extends State<ItemsScreen> {
                       }
                     },
                     background: Container(
+                      padding: EdgeInsets.only(left: 20.0),
+                      alignment: Alignment.centerLeft,
                       color: Colors.orange,
+                      child: Icon(
+                        Icons.playlist_add,
+                        size: 30,
+                        color: Colors.white,
+                      ),
                     ),
                     secondaryBackground: Container(
+                      padding: EdgeInsets.only(right: 20.0),
+                      alignment: Alignment.centerRight,
                       color: Colors.red,
+                      child: Icon(
+                        Icons.delete_outline,
+                        size: 30,
+                        color: Colors.white,
+                      ),
                     ),
                     child: item);
               },
