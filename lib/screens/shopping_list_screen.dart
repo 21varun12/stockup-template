@@ -34,6 +34,15 @@ class _ShoppingListScreenState extends State<ShoppingListScreen> {
     Card(
       child: ListTile(
         leading: Image.network(
+            'https://media.nedigital.sg/fairprice/fpol/media/images/product/XL/10099606_XL1.jpg?w=1200&q=65'),
+        title: Text('Gardenia Enriched White Bread 600g'),
+        subtitle: Text('Quantity: 1'),
+        trailing: Icon(Icons.more_vert),
+      ),
+    ),
+    Card(
+      child: ListTile(
+        leading: Image.network(
             'https://media.nedigital.sg/fairprice/fpol/media/images/product/XL/131467_XL1.jpg'),
         title: Text('Marigold HL Milk'),
         subtitle: Text('Quantity: 1'),
@@ -243,26 +252,84 @@ class _ShoppingListScreenState extends State<ShoppingListScreen> {
               itemBuilder: (context, index) {
                 final item = items[index];
                 return Dismissible(
-                    key: Key('item'), // TODO: find out what the key does
+                    key: UniqueKey(),
                     onDismissed: (direction) {
                       setState(() {
                         items.removeAt(index);
                       });
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content: Text('Marked as consumed'),
-                          backgroundColor: Colors.red,
-                        ),
-                      );
+                      if (direction == DismissDirection.startToEnd) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text('Removed from list'),
+                          ),
+                        );
+                      } else {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text('Marked as bought'),
+                          ),
+                        );
+                      }
                     },
                     background: Container(
-                      color: Colors.redAccent,
+                      padding: EdgeInsets.only(left: 20.0),
+                      alignment: Alignment.centerLeft,
+                      color: Colors.red,
+                      child: Icon(
+                        Icons.delete_outline,
+                        size: 30,
+                        color: Colors.white,
+                      ),
                     ),
                     secondaryBackground: Container(
-                      color: Colors.greenAccent,
+                      padding: EdgeInsets.only(right: 20.0),
+                      alignment: Alignment.centerRight,
+                      color: Colors.green,
+                      child: Icon(
+                        Icons.check_box_outlined,
+                        size: 30,
+                        color: Colors.white,
+                      ),
                     ),
                     child: item);
               },
+            ),
+          ),
+          Container(
+            child: Text('recommended'.toUpperCase()),
+          ),
+          Expanded(
+            flex: 1,
+            child: ListView(
+              children: [
+                Card(
+                  color: Colors.green.shade50,
+                  child: ListTile(
+                    leading: Image.network(
+                        'https://media.nedigital.sg/fairprice/fpol/media/images/product/XL/131467_XL1.jpg'),
+                    title: Text('Marigold HL Milk'),
+                    subtitle: Text('Quantity: 1'),
+                    trailing: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          items.add(
+                            Card(
+                              child: ListTile(
+                                leading: Image.network(
+                                    'https://media.nedigital.sg/fairprice/fpol/media/images/product/XL/131467_XL1.jpg'),
+                                title: Text('Marigold HL Milk'),
+                                subtitle: Text('Quantity: 1'),
+                                trailing: Icon(Icons.more_vert),
+                              ),
+                            ),
+                          );
+                        });
+                      },
+                      child: Icon(Icons.add_circle_outlined),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ],
