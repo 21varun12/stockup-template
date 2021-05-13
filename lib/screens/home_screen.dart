@@ -169,7 +169,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             child: ListTile(
               title: Text(
-                'Monthly Savings',
+                'Food Wasted',
                 style: TextStyle(
                   fontWeight: FontWeight.w800,
                   fontSize: 40,
@@ -374,8 +374,9 @@ class LineChartSample2 extends StatefulWidget {
 
 class _LineChartSample2State extends State<LineChartSample2> {
   List<Color> gradientColors = [
-    const Color(0xff23b6e6),
-    const Color(0xff02d39a),
+    Colors.pinkAccent,
+    Colors.amberAccent,
+    Colors.greenAccent
   ];
 
   bool showAvg = false;
@@ -492,13 +493,13 @@ class _LineChartSample2State extends State<LineChartSample2> {
       lineBarsData: [
         LineChartBarData(
           spots: [
-            FlSpot(0, 3),
-            FlSpot(2.6, 2),
-            FlSpot(4.9, 5),
-            FlSpot(6.8, 3.1),
-            FlSpot(8, 4),
-            FlSpot(9.5, 3),
-            FlSpot(11, 4),
+            FlSpot(0, 5),
+            FlSpot(2.6, 4),
+            FlSpot(4.9, 3),
+            FlSpot(6.8, 3),
+            FlSpot(8, 2),
+            FlSpot(9.5, 2),
+            FlSpot(11, 1),
           ],
           isCurved: true,
           colors: gradientColors,
