@@ -1,8 +1,14 @@
-# Welcome to our StockUP App prototype
+# Welcome to our StockUP App
+
+![StockUP poster](./demo/poster.jpg)
 
 Ever forgotten what’s in your fridge? Or bought a food item only to realise it’s already in your fridge and now end up having too much? Most suggestions we get for this problem would be to buy less or remember to check the expiry date of food items frequently. But with the busy lives we all have, it is inevitable that some things just slip the mind.
 
 So why not let a mobile app handle such mundane things for you and remind you what is about to expire? Better yet, keep track of your food wastage statistics using the same app and increase awareness of your eating habits as well!
+
+|Quick Overview |  Track and Manage Items | Scan New Items | Collaborative Grocery Lists |
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+|![Home Screen](./demo/home.gif)  |  ![Items Screen](./demo/items.gif) |  ![Scan Screen](./demo/scan.gif) |  ![Shopping List Screen](./demo/list.gif) |
 
 ## Aim
 
