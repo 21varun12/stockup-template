@@ -4,7 +4,6 @@ Ever forgotten what’s in your fridge? Or bought a food item only to realise it
 
 So why not let a mobile app handle such mundane things for you and remind you what is about to expire? Better yet, keep track of your food wastage statistics using the same app and increase awareness of your eating habits as well!
 
-
 ## Aim
 
 We hope to make grocery planning and keeping track of food at home easier through a mobile app that allows users to easily add, track and plan their food consumption patterns to reduce food wastage.
@@ -53,3 +52,45 @@ Use web scrapers to collate and store the nutrition info on grocery items seen i
   * Integrate components for better app experience
           
 * Collaborate with others to make a shopping list, with smart prediction using machine learning based on previously bought items
+
+# Tech Stack
+1. Flutter
+2. Tensorflow
+3. Python
+4. OpenCV
+5. Firebase
+6. Beautiful Soup
+
+# Our Qualifications
+
+1. CCA where we use computer vision to detect and recognize moving robots from other teams in realtime and put a bounding box around them
+* Image processing using openCV
+* Object detection models
+* Object tracking
+* Training models using pre-trained models and custom datasets
+
+2. Libraries we’ve worked with before:
+* Tensorflow
+* Matplotlib, Seaborn
+* openCV
+* NumPy, pandas
+
+3. Languages we’ve worked on before: 
+* Python
+* Java
+* Javascript, HTML, CSS
+* C/C++
+* Now some dart for Flutter
+
+4. Hackathons we’ve participated:
+* iNTUition v7.0 (2021)
+  * Built an internal database through scraping of tables and make a simple search engine to match user inputs and a simple histogram to visualize search frequencies. 
+  * Built a web extension that allows users to control video playback on youtube using simple gestures like pinch scrolling, pinch to pause and play
+* NUS Data Science Competition 2020
+  * Recognize handwriting and count valid acumen (chips) from images. Classical and deep learning methods allowed.
+* AWS Build On, Singapore 2020 (Semi-finalist)
+  * Built a prototype of a mobile app that gamifies exercise in a similar manner to how pokemon go works. Teams can meetup and participate in walkathons to find virtual treasure scattered across various locations in Singapore. Easily track fitness goals, compete with friends and claim rewards through government incentives like the HPB National Steps Challenge
+
+# Though we aren't too familiar with the rest, we love to learn and build something awesome!
+
+## Thanks for reading all the way to the end. Feel free to contact us at our telegram ids or emails. Looking forward to hearing from you soon!
