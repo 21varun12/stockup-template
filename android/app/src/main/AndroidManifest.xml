@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.stockup_template">
+    package="com.Orbital2021_Alina_Varun.stockUP_template">
    <application
         android:label="stockup_template"
         android:icon="@mipmap/ic_launcher">
