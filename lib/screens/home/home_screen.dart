@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
+import 'package:stockup_template/services/auth.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -33,9 +34,19 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final AuthService _auth = AuthService();
     return Scaffold(
       appBar: AppBar(
         title: Text('Home'),
+        actions: <Widget>[
+          TextButton.icon(
+            icon: Icon(Icons.person),
+            label: Text('Logout'),
+            onPressed: () async {
+              await _auth.signOut();
+            },
+          )
+        ],
       ),
       body: ListView(
         padding: const EdgeInsets.all(8),
@@ -405,7 +416,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
         SizedBox(
           width: 60,
           height: 34,
-          child: FlatButton(
+          child: TextButton(
             onPressed: () {
               setState(() {
                 showAvg = !showAvg;
